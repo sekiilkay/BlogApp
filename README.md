@@ -1,4 +1,4 @@
-# BlogApp
+# Doğuş Teknoloji Bootcamp BlogApp Projesi
 
 ## Üyelik
 

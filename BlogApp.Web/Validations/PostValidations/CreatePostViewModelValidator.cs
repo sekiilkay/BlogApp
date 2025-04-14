@@ -8,8 +8,8 @@ namespace BlogApp.Web.Validations.PostValidations
         public CreatePostViewModelValidator()
         {
             RuleFor(x => x.Title)
-                .MaximumLength(20)
-                .WithMessage("Başlık en fazla 20 karakter olmalıdır!")
+                .MaximumLength(50)
+                .WithMessage("Başlık en fazla 50 karakter olmalıdır!")
                 .NotNull()
                 .WithMessage("Lütfen başlık giriniz!");
 

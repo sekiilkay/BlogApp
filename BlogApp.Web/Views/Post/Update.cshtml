@@ -1,0 +1,70 @@
+﻿@model UpdatePostViewModel
+
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-sm-12">
+            <div class="bg-white p-5 shadow rounded-4 border border-light-subtle">
+                <h1 class="mb-4 text-center fw-bold text-primary">Mevcut Blog Yazısı Güncelleme</h1>
+
+                <form method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+                    
+                    <input type="hidden" asp-for="PostId"/>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="Title">Başlık</label>
+                        <input asp-for="Title" class="form-control form-control-lg" id="Title" placeholder="Başlık giriniz" />
+                        <span asp-validation-for="Title" class="text-danger small"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="Description">Açıklama</label>
+                        <input asp-for="Description" class="form-control form-control-lg" id="Description" placeholder="Açıklama giriniz" />
+                        <span asp-validation-for="Description" class="text-danger small"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="Content">İçerik</label>
+                        <textarea asp-for="Content" class="form-control form-control-lg" id="Content" rows="5" placeholder="İçeriğinizi buraya yazın..."></textarea>
+                        <span asp-validation-for="Content" class="text-danger small"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="category">Kategori</label>
+                        <select asp-for="CategoryId" class="form-select form-select-lg" id="category">
+                            <option value="1">Web Geliştirme</option>
+                            <option value="2">Mobil Uygulama Geliştirme</option>
+                            <option value="3">Full Stack Geliştirme</option>
+                            <option value="4">Frontend Geliştirme</option>
+                            <option value="5">Backend Geliştirme</option>
+                            <option value="6">Veritabanı Yönetimi</option>
+                        </select>
+                        <span asp-validation-for="CategoryId" class="text-danger small"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="IsActive">Blog Yazısı Yayınlansın mı?</label>
+                        <select asp-for="IsActive" class="form-select form-select-lg" id="IsActive">
+                            <option value="true">Evet</option>
+                            <option value="false">Hayır</option>
+                        </select>
+                        <span asp-validation-for="IsActive" class="text-danger small"></span>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="ImageFile" class="form-label">Görsel</label>
+                        <input asp-for="ImageFile" type="file" class="form-control form-control-lg" id="ImageFile" name="ImageFile" required />
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-lg px-5 py-2 shadow-sm rounded-pill">Güncelle</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

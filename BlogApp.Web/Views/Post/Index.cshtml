@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-8">
+        @await Component.InvokeAsync("_PostListComponentPartial")
+    </div>
+    <div class="col-lg-4">
+        @await Component.InvokeAsync("_CategoryListComponentPartial")
+    </div>
+</div>

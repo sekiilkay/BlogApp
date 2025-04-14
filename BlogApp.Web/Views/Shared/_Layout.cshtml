@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    @await Component.InvokeAsync("_LayoutHeadComponentPartial")
+
+</head>
+<body>
+    <header>
+
+        @await Component.InvokeAsync("_LayoutNavbarComponentPartial")
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <footer style="background-color:#e3f2fd;" class="border-top footer text-muted">
+       
+        @await Component.InvokeAsync("_LayoutFooterComponentPartial")
+
+    </footer>
+
+    @await Component.InvokeAsync("_LayoutScriptComponentPartial")
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿@model List<ResultCategoryViewModel>
+
+@{
+    int count = 0;
+    var colors = new[] { "primary", "dark", "warning", "danger", "success", "secondary", "light", "info" };
+}
+
+<br />
+<div class="bg-white p-4 shadow rounded">
+    <h5 class="fw-bold text-dark mb-3">Kategoriler</h5>
+
+    <div class="d-flex flex-wrap gap-2">
+        @foreach (var item in Model)
+        {
+            <a href="/post/category/@item.Url"
+               class="btn btn-outline-@colors[count++ % colors.Length] btn-sm rounded-pill shadow-sm">
+                @item.Name
+            </a>
+        }
+    </div>
+</div>

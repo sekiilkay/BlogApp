@@ -1,0 +1,60 @@
+﻿@model RegisterViewModel
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card shadow-lg border-0 rounded-3">
+                <div class="card-body p-4">
+                    <h4 class="card-title text-center mb-4 text-primary">BlogApp'e Hoş Geldiniz!</h4>
+                    <p class="text-center mb-4 text-muted">Kayıt olmak için aşağıdaki bilgileri doldurun.</p>
+
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger mb-3" role="alert">
+                    </div>
+
+                    <form method="post">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="name" placeholder="Adınızı giriniz" name="Name" asp-for="Name" required>
+                            <label for="name">Adınız</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="surname" placeholder="Soyadınızı giriniz" name="Surname" asp-for="Surname" required>
+                            <label for="surname">Soyadınız</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="E-posta adresinizi giriniz" name="Email" asp-for="Email" required>
+                            <label for="email">E-posta Adresiniz</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="username" placeholder="Kullanıcı adınızı seçin" name="UserName" asp-for="UserName" required>
+                            <label for="username">Kullanıcı Adı</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="password" placeholder="Şifrenizi oluşturun" name="Password" asp-for="Password" required>
+                            <label for="password">Şifre</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="passwordConfirm" placeholder="Şifrenizi tekrar girin" name="PasswordConfirm" asp-for="PasswordConfirm" required>
+                            <label for="passwordConfirm">Şifreyi Tekrar Girin</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 py-2">Kayıt Ol</button>
+                    </form>
+
+                    <div class="mt-3 text-center">
+                        <small class="text-muted">Zaten bir hesabınız var mı? <a href="/User/SignIn" class="text-primary text-decoration-none">Giriş Yapın</a></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />

@@ -1,0 +1,12 @@
+﻿@model List<ResultPostViewModel>
+
+@{
+    ViewData["Title"] = "GetPostsCategory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-10">
+        @await Component.InvokeAsync("_PostListByCategoryComponentPartial", new { categoryUrl = ViewBag.categoryUrl })
+    </div>
+</div>

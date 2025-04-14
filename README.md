@@ -1,4 +1,4 @@
-# Doğuş Teknoloji Bootcamp BlogApp Projesi
+# Doğuş Teknoloji Bootcamp Projesi
 
 ## Üyelik
 
@@ -26,5 +26,5 @@
 
 - **Repository Pattern & UnitOfWork Pattern**: Veritabanı işlemleri için kullanılan tasarım desenleri.
 - **Identity & Entity Framework**: Kullanıcı yönetimi ve veritabanı işlemleri için kullanılan teknolojiler.
-- **Automapper**: Nesneler arası dönüşüm işlemleri için kullanılan kütüphane.
+- **AutoMapper**: Nesneler arası dönüşüm işlemleri için kullanılan kütüphane.
 - **FluentValidation**: Model doğrulama işlemleri için kullanılan kütüphane.
